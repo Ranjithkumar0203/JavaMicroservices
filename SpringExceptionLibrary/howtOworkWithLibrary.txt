@@ -1,0 +1,18 @@
+cd D:\micro\common-exception-library
+mvn clean install
+This does three things:
+
+Compiles the library source code.
+Creates the jar here:
+D:\micro\common-exception-library\target\common-exception-library-0.0.1-SNAPSHOT.jar
+Installs it into your local Maven repository here:
+C:\Users\ranji\.m2\repository\com\deccan\common-exception-library\0.0.1-SNAPSHOT\
+After that, build your services:
+
+cd D:\micro\Employee
+mvn clean package
+cd D:\micro\Address
+mvn clean package
+For only compile without creating/installing jar:
+
+mvn clean compile
