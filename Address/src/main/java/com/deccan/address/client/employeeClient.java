@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.deccan.address.dto.EmployeeDTO;
 
-@FeignClient(name = "employees")
+@FeignClient(name = "employees", fallback = EmployeeClientFallback.class)
 public interface employeeClient {
     @GetMapping("/employees/{id}")
     public EmployeeDTO getEmployeeWithID(@PathVariable Long id);
